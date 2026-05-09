@@ -22,8 +22,6 @@ This project is created by **LazyCoder**.
 ### 📺 Subscribe to My YouTube Channel
 I post tutorials, Java/Python projects, and Spring Boot content regularly.
 
-👉 **Subscribe Here:**  
-https://www.youtube.com/c/LazyCoderOnline?sub_confirmation=1
 
 ---
 
@@ -34,7 +32,7 @@ https://www.youtube.com/c/LazyCoderOnline?sub_confirmation=1
 
 **I am available for freelance development.**
 
-📱 **WhatsApp:** https://wa.me/919572181024
+📱 **WhatsApp:** https://wa.me/7654019231
 
 <p align="center">
 <a href="https://www.youtube.com/c/LazyCoderOnline?sub_confirmation=1">
@@ -45,6 +43,7 @@ https://www.youtube.com/c/LazyCoderOnline?sub_confirmation=1
 <img src="https://img.shields.io/badge/WhatsApp-Chat%20Now-green?style=for-the-badge&logo=whatsapp" >
 </a>
 </p>
+
 
 ---
 
@@ -85,48 +84,67 @@ https://www.youtube.com/c/LazyCoderOnline?sub_confirmation=1
 
 ---
 
-# ✨ Features
+## ✨ Features
 
-## 👨‍💻 Admin Features
-- Secure Admin Login
-- Stats Dashboard (Total Students, Exams, Questions, Submissions)
-- **Exam CRUD** (title, duration, description)
-- **Question CRUD** per exam
-- Cascade deletes for exams → questions → results
-- Protect answered questions from accidental delete
-- Manage Students
+## 👨‍💼 Admin Features
+
+- Secure Admin Authentication
+- Separate Admin Login Panel
+- Admin Dashboard with Statistics
+- Manage Exams (Create, Update, Delete)
+- Manage Questions for Each Exam
+- Monitor Student Exam Activity
+- View Student Results & Scores
+- Manage Registered Students
 - Reset Student Password
-- Delete Student Account (cascade all related data)
-- View all submissions for any exam
+- Delete Student Accounts
+- Performance Analytics Dashboard
+- Role-Based Access Control
 
 ---
 
-## 🧑‍🎓 Student Features
-- Student Registration (Full Name, Email, Mobile, Profile Picture)
-- Secure Login
-- Dashboard with KPIs + Performance Chart
-- Take Exam (paginated interface + question palette)
-- Live Timer (auto submit)
-- Instant Results (score, percentage, pass/fail)
-- Detailed Review Page (correct vs incorrect answers)
-- Profile Update
-- Upload New Profile Picture
-- Change Password
-- View All Previous Exam Results
+## 👨‍🎓 Student Features
+
+- Student Registration & Login
+- Email OTP Verification System
+- Secure Authentication with Spring Security
+- Personalized Student Dashboard
+- Take Online Exams
+- Real-Time Exam Timer
+- Automatic Exam Submission
+- Instant Result Generation
+- View Previous Exam Results
+- Detailed Answer Review
+- Update Student Profile
+- Upload Profile Picture
+- Change Password Securely
+- Responsive User Interface
 
 ---
 
+## 🔐 Security Features
+
+- Spring Security Authentication
+- Role-Based Authorization
+- Password Encryption using BCrypt
+- Email OTP Verification
+- Secure Session Management
+- Protected Admin Routes
+
+---
 # 🛠️ Tech Stack
 
-| Layer | Technology                                 |
-|------|--------------------------------------------|
-| Backend | Spring Boot 3, Spring Security 6           |
-| Frontend | Thymeleaf, Html, Bootstrap 5, Chart.js     |
-| Database | H2 (file-based) (configurable to other DB) |
-| ORM | Hibernate / JPA                            |
-| Build | Maven                                      |
-| Storage | Local File System for images               |
-
+| Layer | Technology |
+|------|------------|
+| Backend | Spring Boot 3, Spring Security 6 |
+| Frontend | Thymeleaf, HTML5, Bootstrap 5, Chart.js |
+| Database | MySQL Database |
+| ORM | Hibernate / Spring Data JPA |
+| Build Tool | Maven |
+| Authentication | Spring Security + Email OTP |
+| Programming Language | Java 17 |
+| File Storage | Local File System |
+| Server | Apache Tomcat (Embedded) |
 ---
 
 # 🚀 How to Run the Project
@@ -141,35 +159,57 @@ https://www.youtube.com/c/LazyCoderOnline?sub_confirmation=1
 ### ✔️ Clone the Repository
 
 ```bash
-git clone https://github.com/sumitkumar1503/online-exam-system.git
+git clone https://github.com/KRAJNISH-REBEL/online-exam-system.git
 cd online-exam-system
 ```
 
 ---
-
 ### ✔️ Start the Application
 
-Open the project → Run:
+Open the project in your preferred IDE:
 
-`OnlineExamApplication.java`
+- IntelliJ IDEA
+- VS Code
+- Eclipse / Spring Tool Suite
 
-Server will start at:
+Run the main application file:
+
+```bash
+OnlineExamApplication.java
+```
+
+Or use Maven:
+
+```bash
+mvn spring-boot:run
+```
+
+Application will start at:
 
 👉 http://localhost:7890
 
 ---
 
-# 🗄️ Database (H2)
+# 🗄️ Database Configuration (MySQL)
 
-Access H2 Console:
+This project uses **MySQL Database**.
 
-👉 http://localhost:7890/h2-console
+Update the database configuration inside:
 
+```properties
+src/main/resources/application.properties
 ```
-JDBC URL : jdbc:h2:file:./data/examdb  
-Username : sa  
-Password : password
+
+Example configuration:
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/examPro
+spring.datasource.username=YOUR_USERNAME
+spring.datasource.password=YOUR_PASSWORD
+spring.jpa.hibernate.ddl-auto=update
 ```
+
+Make sure MySQL server is running before starting the application.
 
 ---
 
@@ -183,7 +223,10 @@ Password : password
 
 # 📜 License
 
-This project is **open-source** under the **MIT License**.
+This project is developed for educational and learning purposes.
+
+Feel free to use, modify, and enhance this project for personal or academic use.
+
 
 ---
 
